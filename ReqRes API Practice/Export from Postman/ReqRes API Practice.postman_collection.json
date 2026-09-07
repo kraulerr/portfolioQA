@@ -1,0 +1,235 @@
+{
+  "info": {
+    "_postman_id": "b3fd4eb5-4f9a-4432-85f1-89f316cd4d3e",
+    "name": "ReqRes API Practice",
+    "description": "Практика тестирования REST API на reqres.in",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57909196",
+    "_collection_link": "https://go.postman.co/collection/57909196-b3fd4eb5-4f9a-4432-85f1-89f316cd4d3e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01 — GET Список пользователей",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://reqres.in/api/users?page=1",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "Шаги:\n\n1\\. Отправить GET-запрос на [https://reqres.in/api/users?page=1](https://reqres.in/api/users?page=1)\n\nОжидаемый результат:\n\n1. Ответ в формате JSON\n    \n2. Есть поле data (массив)\n    \n3. У пользователей есть id, email, first_name, last_name\n    \n4. Есть поля page, total, total_pages"
+      },
+      "response": []
+    },
+    {
+      "name": "02 — GET Получение конкретного пользователя",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://reqres.in/api/users/2",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users",
+            "2"
+          ]
+        },
+        "description": "Шаги:\n\n1\\. Отправить GET-запрос на [https://reqres.in/api/users/2](https://reqres.in/api/users/2)\n\nОжидаемый результат:\n\n1. Ответ в формате JSON\n    \n2. Есть поле data с объектом пользователя\n    \n3. У пользователя есть id=2, email, first_name, last_name"
+      },
+      "response": []
+    },
+    {
+      "name": "03 — POST Создать пользователя",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Yjin\",\r\n  \"job\": \"Junior QA Engineer\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://reqres.in/api/users",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users"
+          ]
+        },
+        "description": "Шаги:\n\n1. Отправить POST-запрос на [https://reqres.in/api/users](https://reqres.in/api/users)\n    \n2. В Body (JSON): {\"name\":\"Yjin\",\"job\":\"Junior QA Engineer\"}\n    \n\nОжидаемый результат:\n\n1. Ответ в формате JSON\n    \n2. В ответе возвращаются name=\"Yjin\", job=\"Junior QA Engineer\"\n    \n3. Есть сгенерированный id\n    \n4. Есть поле createdAt"
+      },
+      "response": []
+    },
+    {
+      "name": "04 — PUT Полное обновление пользователя",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Alisa\",\r\n    \"job\":\"AI Assistant\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://reqres.in/api/users/2\n",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users",
+            "2\n"
+          ]
+        },
+        "description": "Шаги:\n\n1. Отправить PUT-запрос на [https://reqres.in/api/users/2](https://reqres.in/api/users/2)\n    \n2. В Body (JSON): {\"name\":\"Alisa\",\"job\":\"AI Assistant\"}\n    \n\nОжидаемый результат:\n\n1. Ответ в формате JSON\n    \n2. В ответе name=\"Alisa\", job=\"AI Assistant\"\n    \n3. Есть поле updatedAt"
+      },
+      "response": []
+    },
+    {
+      "name": "05 — PATCH Частичное обновление пользователя",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"job\":\"AI from Yandex\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://reqres.in/api/users/2\n",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users",
+            "2\n"
+          ]
+        },
+        "description": "Шаги:\n\n1. Отправить PATCH-запрос на [https://reqres.in/api/users/2](https://reqres.in/api/users/2)\n    \n2. В Body (JSON): {\"job\":\"AI from Yandex\"}\n    \n\nОжидаемый результат:\n\n1. Ответ в формате JSON\n    \n2. В ответе job=\"AI from Yandex\"\n    \n3. Есть поле updatedAt"
+      },
+      "response": []
+    },
+    {
+      "name": "06 — POST Логин с валидными данными",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"eve.holt@reqres.in\",\r\n    \"password\":\"cityslicka\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://reqres.in/api/login",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "login"
+          ]
+        },
+        "description": "Шаги:\n\n1. Отправить POST-запрос на https://reqres.in/api/login\n    \n2. В Body (JSON): {\"email\":\"eve.holt@reqres.in\",\"password\":\"cityslicka\"}\n    \n\nОжидаемый результат:\n\n1. Ответ в формате JSON\n    \n2. Есть поле token с непустым значением"
+      },
+      "response": []
+    },
+    {
+      "name": "07 — POST Логин с пустым паролем (негативный)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"eve.holt@reqres.in\",\r\n    \"password\":\"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://reqres.in/api/login",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "login"
+          ]
+        },
+        "description": "Шаги:\n\n1. Отправить POST-запрос на [https://reqres.in/api/login](https://reqres.in/api/login)\n    \n2. В Body (JSON): {\"email\":\"[eve.holt@reqres.in](https://mailto:eve.holt@reqres.in)\",\"password\":\"\"}\n    \n\nОжидаемый результат:\n\n1. Ответ в формате JSON\n    \n2. Есть поле error с сообщением об ошибке"
+      },
+      "response": []
+    },
+    {
+      "name": "08 — DELETE Удаление пользователя",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://reqres.in/api/users/2",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users",
+            "2"
+          ]
+        },
+        "description": "Шаги:\n\n1. Отправить DELETE-запрос на [https://reqres.in/api/users/2](https://reqres.in/api/users/2)\n    \n\nОжидаемый результат:\n\n1. Тело ответа пустое\n    \n2. Код 204 (при повторном GET /api/users/2 может быть 404, зависит от реализации)"
+      },
+      "response": []
+    }
+  ]
+}
