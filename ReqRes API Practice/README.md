@@ -22,7 +22,7 @@
 portfolioQA/
 ├── ReqRes API Practice/
     ├── README.md
-    ├── Test-cases.docx # Таблица с тест-кейсами
+    ├── Test-cases.md # Таблица с тест-кейсами
     ├── Export from Postman/
     │   └── ReqRes API Practice.postman_collection.json # Экспортированная коллекция Postman
     └── Screenshots/
