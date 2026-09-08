@@ -105,8 +105,8 @@ portfolioQA/
 
 ## Контакты
 
-1. Email: <mailto:kraulerr@yandex.ru>
+1. Email: kraulerr@yandex.ru
 2. Telegram: [@kraulerr](https://t.me/kraulerr)
-3. Телефон:
+3. Телефон: 8 (915) 897-03-04
 
 > **Примечание:** Этот проект создан в учебных целях для демонстрации навыков ручного тестирования API. ReqRes API — публичный сервис, предназначенный для практики тестирования.
