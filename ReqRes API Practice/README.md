@@ -66,11 +66,11 @@ portfolioQA/
 ### Вариант 1: Postman
 
 1. Импортируй коллекцию в Postman:
-   1. Открой Postman → **Import** → выбери файл `ReqRes API Practice.postman_collection.json`.
+        Открой Postman → **Import** → выбери файл `ReqRes API Practice.postman_collection.json`.
 2. Коллекция **ReqRes API Practice** появится в списке.
 3. Открой любой запрос и нажми **Send** — запрос отправится.
 4. Чтобы запустить все тесты сразу:
-   1. Выбери коллекцию → нажми **Run** → **Run collection** → **Run ReqRes API Practice**.
+        Выбери коллекцию → нажми **Run** → **Run collection** → **Run ReqRes API Practice**.
 
 ## Тест-кейсы
 
