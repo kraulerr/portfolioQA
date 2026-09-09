@@ -215,6 +215,11 @@ portfolioQA/
 - Документация OpenCart: https://docs.opencart.com
 - Шпаргалка по техникам тест-дизайна: https://habr.com/ru/articles/740026/
 
+## Контакты
+
+1. Email: kraulerr@yandex.ru
+2. Telegram: [@kraulerr](https://t.me/kraulerr)
+
 ---
 
 > **Примечание**: Этот проект создан в учебных целях для демонстрации навыков тест-дизайна и документирования. Форма регистрации используется как учебный полигон.
